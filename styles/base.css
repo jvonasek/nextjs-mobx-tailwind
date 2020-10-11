@@ -1,0 +1,28 @@
+:root {
+  @apply .light;
+}
+
+.dark {
+  --color-foreground: #f7fafc;
+  --color-background: #2d3748;
+}
+
+.light {
+  --color-foreground: #1a202c;
+  --color-background: #fff;
+}
+
+@tailwind base;
+/* Start purging... */
+@tailwind components;
+@tailwind utilities;
+/* Stop purging. */
+
+body {
+  @apply antialiased bg-background text-foreground;
+}
+
+p,
+a {
+  @apply text-foreground;
+}
